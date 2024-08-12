@@ -1,0 +1,123 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.row{
+    display: table;
+    clear:both;
+    width: 100%;
+}
+
+[class^="col-"]{
+    padding: 0 15px;
+    float:left;
+}
+
+.col-3{
+    width:calc((100% * 3) / 12);
+}
+
+.col-9{
+    width: calc((100% * 9) / 12);
+}
+a:link , a:visited{
+    text-decoration: none;
+}
+.text-right{
+    text-align: right;
+}
+
+.header{
+    background-color: #000000;
+    color:#ffffff;
+}
+
+.heading-pre{
+    font-size: 36px;
+    padding: 25px;
+    text-align: left;
+
+}
+.logo{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.navbar-ul{
+    list-style: none;
+    display: inline-block;
+}
+  
+
+
+.navbar ul li{
+    display: inline-block;
+    position:relative;
+}
+.navbar ul li::before{
+    content:'';
+    width:0;
+    height: 100%;;
+    background-color: orange;
+    position:absolute;
+    top:0;
+    left:50%;
+    transition: all .4s ease-in-out;
+}
+.navbar li a:hover::before,
+.navbar li a:focus::before,
+.navbar li a:active::before,
+.navbar li.active a::before{
+    width: 100%;
+    left:0;
+}
+
+   
+
+.navbar ul li a:link,
+.navbar ul li a:visited{
+    color: #ffffff;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    line-height: 34px;
+    position: relative;
+    z-index: 1;
+   
+}
+
+.navbar li a::before{
+    content:'';
+    width:0%;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: all .4s ease-in-out;
+}
+
+.navbar li:hover::before{
+    width:100%;
+}
+
+.navbar li a:hover::before,
+.navbar li a:active::before,
+.navbar li a:focus::before{
+    width:100%;
+    left:0;
+}
+/* .navbar ul li a.active{
+    background-color: orange;
+    color: #fff;
+} */
+
+ 
+
+
+
